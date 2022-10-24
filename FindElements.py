@@ -8,8 +8,7 @@ class MnWin(QMainWindow):
         super(MnWin, self).__init__()
 
     def file_select(self) -> Path:
-        '''Allows user to select folder where text files are storeed and creates dictionary of 
-        hashtag groups as keys and lists of hashtags as values.'''
+        '''Allows user to select folder where the [PyQt6_ui].py converted by uic from the QtDesigner.ui file'''
         fname = QFileDialog.getOpenFileName(self ,"Find a File to read", ".py")
         if fname:
             path_to_module = Path(fname[0])
