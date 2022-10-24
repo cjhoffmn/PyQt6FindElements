@@ -8,7 +8,7 @@ class MnWin(QMainWindow):
         super(MnWin, self).__init__()
 
     def file_select(self) -> Path:
-        '''Allows user to select folder where the [PyQt6_ui].py converted by uic from the QtDesigner.ui file'''
+        '''Allows user to select folder where the [PyQt6_ui].py converted by uic from the QtDesigner.ui file is stored'''
         fname = QFileDialog.getOpenFileName(self ,"Find a File to read", ".py")
         if fname:
             path_to_module = Path(fname[0])
