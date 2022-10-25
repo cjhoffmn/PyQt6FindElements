@@ -34,7 +34,7 @@ def main():
     developer to identify various element types.  If set all the way from QT Designer then included here the 
     list to copy will be filtered to the highly relevant.'''
 
-    srch_term_list = ["btn","lbl","text_edit","cmbbox", "action"]
+    srch_term_list = ["btn","lbl","text_edit","cmbbox","action"]
 
     #get user PyQt6_ui.py file
     path_to_module = mw.file_select()
@@ -58,7 +58,8 @@ def main():
                         ]
     et_en_setObj = list(zip(filteredlist, elmnt_typ_lines))
     
-    #Filter the list for any lines that were included that had a set operator but are not elements
+    #Filter the list for any lines that were included that had a set operator but are not elements. Solves
+    # the problem of the initial window name assignment, amongst other things.
     et_en_objs = [en_et for en_et in et_en_setObj if en_et[1][0] != '[]']
 
     #split the list back apart into names and lines to so the lines can be reduced to the object name only
